@@ -12,26 +12,14 @@
 */
 Use App\User;
 
-Route::get('/', function() {
-    return view('welcome!');
-});
+Route::get('/url-hello-world', 'ShowProfile@hello');
 
-Route::get('/url-hello-world', function() {
-    return 'Hello world!';
-});
+Route::get('/tutu', 'ShowProfile@tutu');
 
-Route::get('/tutu', function() {
-    $a = [1, 0, 'gsdgshg'];
-    dd($a);
-});
+Route::get('/usuarios', 'ShowProfile@usuarios');
 
-Route::get('/usuarios', function() {
-    $aUser = User::find(1);
-    //foreach ($aUser as $a) {
-        //echo $a -> name . " " . $a -> id . " " . $a -> email . "<br>";
-    dd($aUser);
-});
+Route::get('/ruta/{str1}/and/{str2?}', 'ShowProfile@nombre');
 
-Route::get('/ruta/{str}', function($str) {
-    return "La ruta es: /ruta/{$str}";
-});
+Route::get('/ruta', 'ShowProfile@welcome');
+
+Route::get('/', 'ShowProfile@welcome');
