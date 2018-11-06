@@ -26,8 +26,8 @@ Route::get('/tutu', function() {
 });
 
 Route::get('/usuarios', function() {
-    $aUser = User::all();
-    foreach ($aUser as $a) {
-        echo $a -> name . "<br>";
-    }
+    $aUser = User::find(1);
+    //foreach ($aUser as $a) {
+        //echo $a -> name . " " . $a -> id . " " . $a -> email . "<br>";
+    dd($aUser);
 });
