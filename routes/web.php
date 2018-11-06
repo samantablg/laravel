@@ -10,7 +10,24 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Use App\User;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function() {
+    return view('welcome!');
+});
+
+Route::get('/url-hello-world', function() {
+    return 'Hello world!';
+});
+
+Route::get('/tutu', function() {
+    $a = [1, 0, 'gsdgshg'];
+    dd($a);
+});
+
+Route::get('/usuarios', function() {
+    $aUser = User::all();
+    foreach ($aUser as $a) {
+        echo $a -> name . "<br>";
+    }
 });
