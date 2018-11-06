@@ -14,11 +14,7 @@ class user_seeder extends Seeder
     {
 
         for ($i = 0; $i < 10; $i++)
-            static::Create_User ((object)[
-                'MAIL' => 'tutu' , $i . '@adpcprojects.com',
-                'NAME' => 'tutu' . $i,
-                'PASSWORD' => 'tutu' . $i
-            ]);
+            factory(User::class) -> create();
     }
 
     private static function Create_User ($objUser) {
