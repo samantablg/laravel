@@ -31,3 +31,7 @@ Route::get('/usuarios', function() {
         //echo $a -> name . " " . $a -> id . " " . $a -> email . "<br>";
     dd($aUser);
 });
+
+Route::get('/ruta/{str}', function($str) {
+    return "La ruta es: /ruta/{$str}";
+});
