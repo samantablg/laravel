@@ -23,3 +23,9 @@ Route::get('/ruta/{str1}/and/{str2?}', 'ShowProfile@nombre');
 Route::get('/ruta', 'ShowProfile@welcome');
 
 Route::get('/', 'ShowProfile@welcome');
+
+Route::get('/prueba', 'ShowProfile@prueba');
+
+//Route::get('/prueba/{str}', 'ShowProfile@prueba1');
+
+Route::get('/prueba/{id}', 'ShowProfile@buscar');
